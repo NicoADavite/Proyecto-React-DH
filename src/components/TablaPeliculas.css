@@ -1,0 +1,8 @@
+.tabla-peliculas{
+    margin: 0px 24px;
+}
+
+.tabla-peliculas th,
+.tabla-peliculas td {
+    padding: 10px;
+}
