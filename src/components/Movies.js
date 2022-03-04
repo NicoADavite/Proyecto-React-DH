@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 
 import Movie from "./Movie";
 
-import './TablaPeliculas.css'
+import './Movies.css'
 
 class Movies extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            movies: [],
-            genres: []
+            movies: []
         }
     }
 
@@ -22,12 +21,6 @@ class Movies extends Component {
                 this.setState({movies: movies.data})
                 console.log(movies)
             })
-
-        fetch("http://localhost:3001/api/genres")
-            .then(response => {return response.json()})
-            .then(genres => {
-                this.setState({genres: genres.data})
-            })
     }
 
     render() { 
@@ -38,7 +31,7 @@ class Movies extends Component {
                     <tbody>
                         <tr>
                             <th>Título</th>
-                            <th>Duración</th>
+                            <th>Duración (min)</th>
                             <th>Rating</th>
                             <th>Géneros</th>
                             <th>Premios</th>

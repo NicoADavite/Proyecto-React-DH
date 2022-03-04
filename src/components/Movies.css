@@ -5,4 +5,10 @@
 .tabla-peliculas th,
 .tabla-peliculas td {
     padding: 10px;
+    text-align: center;
+}
+
+
+.tabla-peliculas td.movie-title{
+    text-align: justify;
 }

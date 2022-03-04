@@ -10,14 +10,28 @@ function Movie(props) {
     // } else {
     //     genres = props.genre_id;
     // }
+
+    let length;
+    if(props.length === null){
+        length = "-"
+    } else {
+        length = props.length
+    }
+
+    let genre;
+    if(props.genre === null){
+        genre = "-"
+    } else {
+        genre = props.genre.name
+    }
     
     return (  
         <React.Fragment>
             <tr>
-                <td>{props.title}</td>
-                <td>{props.length}</td>
+                <td className='movie-title'>{props.title}</td>
+                <td>{length}</td>
                 <td>{props.rating}</td>
-                <td>{props.genre_id}</td>   
+                <td>{genre}</td>   
                 <td>{props.awards}</td>
             </tr>
         </React.Fragment>

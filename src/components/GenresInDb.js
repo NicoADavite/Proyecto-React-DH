@@ -11,7 +11,11 @@ class GenresInDb extends Component {
     }
 
     cambiarFondoBody(){
-        document.querySelector("#genres-card-body").classList.add("bg-secondary");
+        document.querySelector("#genres-card-body").classList.toggle("bg-secondary");
+    }
+
+    originalFondoBody(){
+        document.querySelector("#genres-card-body").classList.toggle("bg-secondary");
     }
 
     componentDidMount() {
@@ -31,7 +35,7 @@ class GenresInDb extends Component {
                 <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4">
                         <div className="card-header py-3">
-                            <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={this.cambiarFondoBody}>Genres in Data Base</h5>
+                            <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={this.cambiarFondoBody} onMouseLeave={this.originalFondoBody}>Genres in Data Base</h5>
                         </div>
                         <div className="card-body" id="genres-card-body">
                             <div className="row">
