@@ -27,15 +27,16 @@ class Movies extends Component {
         return (  
             <React.Fragment>
                 <table border="1" className="tabla-peliculas">
-
-                    <tbody>
+                    <thead>
                         <tr>
-                            <th>Título</th>
-                            <th>Duración (min)</th>
-                            <th>Rating</th>
-                            <th>Géneros</th>
-                            <th>Premios</th>
+                            <th>TITULO</th>
+                            <th>DURACION (min)</th>
+                            <th>RATING</th>
+                            <th>GENERO</th>
+                            <th>PREMIOS</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         {this.state.movies.map((movie, i) => {return(<Movie {...movie} key={`movie-${i}`}/>)})}                    
                     </tbody>
 
